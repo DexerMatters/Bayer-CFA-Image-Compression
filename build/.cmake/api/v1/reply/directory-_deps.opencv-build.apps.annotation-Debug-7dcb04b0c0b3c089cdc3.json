@@ -1,0 +1,53 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"ocv_add_application"
+		],
+		"files" : 
+		[
+			"build/_deps/opencv-src/apps/CMakeLists.txt",
+			"build/_deps/opencv-src/apps/annotation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "dev",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"bin/opencv_annotation"
+			],
+			"targetId" : "opencv_annotation::@4b63b93f893af88a0217",
+			"targetIndex" : 10,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/apps/annotation",
+		"source" : "build/_deps/opencv-src/apps/annotation"
+	}
+}

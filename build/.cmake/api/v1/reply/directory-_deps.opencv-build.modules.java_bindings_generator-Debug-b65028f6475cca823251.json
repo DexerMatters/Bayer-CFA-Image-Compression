@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/modules/java_bindings_generator",
+		"source" : "build/_deps/opencv-src/modules/java/generator"
+	}
+}

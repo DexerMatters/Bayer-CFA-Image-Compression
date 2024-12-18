@@ -1,0 +1,1914 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/opencv-build",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						19,
+						20,
+						22,
+						23,
+						24,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build-Debug-dd7b657ed1af5b745a1e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src",
+					"targetIndexes" : 
+					[
+						0,
+						18,
+						24,
+						36,
+						56,
+						64
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/3rdparty/protobuf",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.3rdparty.protobuf-Debug-8d0dd75197c390f02eb4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "build/_deps/opencv-src/3rdparty/protobuf",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/3rdparty/quirc",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.3rdparty.quirc-Debug-3962c80d21c7948b578d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "build/_deps/opencv-src/3rdparty/quirc",
+					"targetIndexes" : 
+					[
+						63
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/3rdparty/ittnotify",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.3rdparty.ittnotify-Debug-3e49031666a1f371f231.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "build/_deps/opencv-src/3rdparty/ittnotify",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.include-Debug-665546d146b6cadc5848.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/include"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/calib3d",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.calib3d-Debug-58d9af7a8419db5afc45.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/calib3d"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/core",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.core-Debug-be7d32fd989535bdf621.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/core"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/dnn",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.dnn-Debug-e7c187ed4a90a9831358.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/dnn"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/features2d",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.features2d-Debug-c47b3e001d7fc626b5ad.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/features2d"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/flann",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.flann-Debug-9f219f775ae5c9d77fa2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/flann"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/gapi",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.gapi-Debug-cd0bee1a9500fe6dc106.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/gapi"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/highgui",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.highgui-Debug-012e1b80db4bb1a119f5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/highgui"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/imgcodecs",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.imgcodecs-Debug-376922a7da07715cc746.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/imgcodecs"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/imgproc",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.imgproc-Debug-68c0b7c61bd0da555177.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/imgproc"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/java",
+					"childIndexes" : 
+					[
+						16
+					],
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.java-Debug-19eb10ac5b5cc6c33595.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/java"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/java/generator",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.java.generator-Debug-f8fd5cfcb41df21ca849.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 15,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/java/generator"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/js",
+					"childIndexes" : 
+					[
+						18
+					],
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.js-Debug-3f6ea9822d3de2791b47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/js"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/js/generator",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.js.generator-Debug-69fe86b182a07b7ca1a1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 17,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/js/generator"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/ml",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.ml-Debug-905b8197c6621c68ec4b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/ml"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/objc",
+					"childIndexes" : 
+					[
+						21
+					],
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.objc-Debug-e6d612fe8077b7104f4a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/objc"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/objc/generator",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.objc.generator-Debug-cefbcee5a9872744aaf5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 20,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/objc/generator"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/objdetect",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.objdetect-Debug-a60f02e76ffbd98c6595.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/objdetect"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/photo",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.photo-Debug-159e53ea6d62df2f0fb8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/photo"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/python",
+					"childIndexes" : 
+					[
+						25,
+						26,
+						27,
+						28
+					],
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.python-Debug-e1c300ab2c20891add68.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/python"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/python/bindings",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.python.bindings-Debug-7825b5ca6ed8ebe105de.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 24,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/python/bindings"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/python/test",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.python.test-Debug-8bd8210e9a23fe8cfbfd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 24,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/python/test"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/python/python2",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.python.python2-Debug-48dbb7cd26fef482e069.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 24,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/python/python2"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/python/python3",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.python.python3-Debug-035d006da9121a2d83aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 24,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/python/python3"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/stitching",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.stitching-Debug-62b1ef3749f60eed3ce8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/stitching"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/ts",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.ts-Debug-f70d7396db613e2e3c5b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/ts"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/video",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.video-Debug-53c16dedce201b92fd7a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/video"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/videoio",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.videoio-Debug-b1fc345eef948af67d9d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/videoio",
+					"targetIndexes" : 
+					[
+						61
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/.firstpass/world",
+					"jsonFile" : "directory-_deps.opencv-build.modules..firstpass.world-Debug-9faaeda1d70c15749220.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/modules/world"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/core",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.core-Debug-4f3bd2b012421aa84553.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 5,
+					"source" : "build/_deps/opencv-src/modules/core",
+					"targetIndexes" : 
+					[
+						12,
+						27,
+						42
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/flann",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.flann-Debug-7ba4713fa74b3861e108.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 6,
+					"source" : "build/_deps/opencv-src/modules/flann",
+					"targetIndexes" : 
+					[
+						15,
+						45
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/imgproc",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.imgproc-Debug-fe362a7985101942937c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 7,
+					"source" : "build/_deps/opencv-src/modules/imgproc",
+					"targetIndexes" : 
+					[
+						20,
+						32,
+						49
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/ml",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.ml-Debug-cb96a8ccec173374498c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 8,
+					"source" : "build/_deps/opencv-src/modules/ml",
+					"targetIndexes" : 
+					[
+						22,
+						50
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/photo",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.photo-Debug-de8e4d5d104f11c4a826.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 9,
+					"source" : "build/_deps/opencv-src/modules/photo",
+					"targetIndexes" : 
+					[
+						34,
+						39,
+						52
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/python_tests",
+					"jsonFile" : "directory-_deps.opencv-build.modules.python_tests-Debug-1c730ed56be721210e79.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 10,
+					"source" : "build/_deps/opencv-src/modules/python/test"
+				},
+				{
+					"build" : "_deps/opencv-build/modules/dnn",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.dnn-Debug-fe725f930aa3bdc2382e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 11,
+					"source" : "build/_deps/opencv-src/modules/dnn",
+					"targetIndexes" : 
+					[
+						13,
+						28,
+						43
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/features2d",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.features2d-Debug-c5496e2fece030426726.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 12,
+					"source" : "build/_deps/opencv-src/modules/features2d",
+					"targetIndexes" : 
+					[
+						14,
+						29,
+						44
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/imgcodecs",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.imgcodecs-Debug-81b4b68574474cc3e020.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 13,
+					"source" : "build/_deps/opencv-src/modules/imgcodecs",
+					"targetIndexes" : 
+					[
+						19,
+						31,
+						48
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/videoio",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.videoio-Debug-7edd03cdc7aed63a0779.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 14,
+					"source" : "build/_deps/opencv-src/modules/videoio",
+					"targetIndexes" : 
+					[
+						38,
+						55,
+						60
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/calib3d",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.calib3d-Debug-879be5547bff01566450.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 15,
+					"source" : "build/_deps/opencv-src/modules/calib3d",
+					"targetIndexes" : 
+					[
+						11,
+						26,
+						41
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/highgui",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.highgui-Debug-5608cb675754c3563f2e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 16,
+					"source" : "build/_deps/opencv-src/modules/highgui",
+					"targetIndexes" : 
+					[
+						17,
+						47
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/objdetect",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.objdetect-Debug-1c61f59ae1407757ec9c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 17,
+					"source" : "build/_deps/opencv-src/modules/objdetect",
+					"targetIndexes" : 
+					[
+						25,
+						33,
+						51
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/stitching",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.stitching-Debug-d41583e1e30b889cf242.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 18,
+					"source" : "build/_deps/opencv-src/modules/stitching",
+					"targetIndexes" : 
+					[
+						35,
+						40,
+						53
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/ts",
+					"jsonFile" : "directory-_deps.opencv-build.modules.ts-Debug-d598097689e84d2471fb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 19,
+					"source" : "build/_deps/opencv-src/modules/ts",
+					"targetIndexes" : 
+					[
+						57
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/video",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.video-Debug-03d1ed2883ade9d19502.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 20,
+					"source" : "build/_deps/opencv-src/modules/video",
+					"targetIndexes" : 
+					[
+						37,
+						54,
+						59
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/gapi",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.modules.gapi-Debug-966f816353704a6bc142.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 21,
+					"source" : "build/_deps/opencv-src/modules/gapi",
+					"targetIndexes" : 
+					[
+						16,
+						30,
+						46
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/java_bindings_generator",
+					"jsonFile" : "directory-_deps.opencv-build.modules.java_bindings_generator-Debug-b65028f6475cca823251.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 22,
+					"source" : "build/_deps/opencv-src/modules/java/generator",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/js_bindings_generator",
+					"jsonFile" : "directory-_deps.opencv-build.modules.js_bindings_generator-Debug-df1bc6459f1b980cfbf5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 23,
+					"source" : "build/_deps/opencv-src/modules/js/generator",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/objc_bindings_generator",
+					"jsonFile" : "directory-_deps.opencv-build.modules.objc_bindings_generator-Debug-cf4f81bb6fd305de37e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 24,
+					"source" : "build/_deps/opencv-src/modules/objc/generator",
+					"targetIndexes" : 
+					[
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/modules/python_bindings_generator",
+					"jsonFile" : "directory-_deps.opencv-build.modules.python_bindings_generator-Debug-5a0bdbe70ccb2f38ea80.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 25,
+					"source" : "build/_deps/opencv-src/modules/python/bindings",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/doc",
+					"jsonFile" : "directory-_deps.opencv-build.doc-Debug-66670c723f56b70070d9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/doc"
+				},
+				{
+					"build" : "_deps/opencv-build/data",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.data-Debug-539bf203ee88e8354f91.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/data"
+				},
+				{
+					"build" : "_deps/opencv-build/apps",
+					"childIndexes" : 
+					[
+						58,
+						59,
+						60,
+						61,
+						62
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.apps-Debug-1beb433f65b47435503a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/opencv-src/apps"
+				},
+				{
+					"build" : "_deps/opencv-build/apps/annotation",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.apps.annotation-Debug-7dcb04b0c0b3c089cdc3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 57,
+					"projectIndex" : 26,
+					"source" : "build/_deps/opencv-src/apps/annotation",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/apps/visualisation",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.apps.visualisation-Debug-ec98e94a382fb5f15f95.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 57,
+					"projectIndex" : 27,
+					"source" : "build/_deps/opencv-src/apps/visualisation",
+					"targetIndexes" : 
+					[
+						62
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/apps/interactive-calibration",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.apps.interactive-calibration-Debug-c03fb50398e57c809d9a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 57,
+					"projectIndex" : 28,
+					"source" : "build/_deps/opencv-src/apps/interactive-calibration",
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/apps/version",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.apps.version-Debug-7ec29c4a5860bfa75df6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 57,
+					"projectIndex" : 29,
+					"source" : "build/_deps/opencv-src/apps/version",
+					"targetIndexes" : 
+					[
+						58
+					]
+				},
+				{
+					"build" : "_deps/opencv-build/apps/model-diagnostics",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.opencv-build.apps.model-diagnostics-Debug-81f55276839f3ba8f5ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 57,
+					"projectIndex" : 30,
+					"source" : "build/_deps/opencv-src/apps/model-diagnostics",
+					"targetIndexes" : 
+					[
+						23
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "bic",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						55,
+						56,
+						57
+					],
+					"name" : "OpenCV",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						18,
+						24,
+						36,
+						56,
+						61,
+						64
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "libprotobuf",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "quirc",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						63
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ittnotify",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						34
+					],
+					"name" : "opencv_core",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						12,
+						27,
+						42
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						35
+					],
+					"name" : "opencv_flann",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						15,
+						45
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						36
+					],
+					"name" : "opencv_imgproc",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						20,
+						32,
+						49
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						37
+					],
+					"name" : "opencv_ml",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						22,
+						50
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						38
+					],
+					"name" : "opencv_photo",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						34,
+						39,
+						52
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						39
+					],
+					"name" : "opencv_python_tests",
+					"parentIndex" : 1
+				},
+				{
+					"directoryIndexes" : 
+					[
+						40
+					],
+					"name" : "opencv_dnn",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						13,
+						28,
+						43
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						41
+					],
+					"name" : "opencv_features2d",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						14,
+						29,
+						44
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						42
+					],
+					"name" : "opencv_imgcodecs",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						19,
+						31,
+						48
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						43
+					],
+					"name" : "opencv_videoio",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						38,
+						55,
+						60
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						44
+					],
+					"name" : "opencv_calib3d",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						11,
+						26,
+						41
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						45
+					],
+					"name" : "opencv_highgui",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						17,
+						47
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						46
+					],
+					"name" : "opencv_objdetect",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						25,
+						33,
+						51
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						47
+					],
+					"name" : "opencv_stitching",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						35,
+						40,
+						53
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						48
+					],
+					"name" : "opencv_ts",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						57
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						49
+					],
+					"name" : "opencv_video",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						37,
+						54,
+						59
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						50
+					],
+					"name" : "opencv_gapi",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						16,
+						30,
+						46
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						51
+					],
+					"name" : "opencv_java_bindings_generator",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						52
+					],
+					"name" : "opencv_js_bindings_generator",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						53
+					],
+					"name" : "opencv_objc_bindings_generator",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						54
+					],
+					"name" : "opencv_python_bindings_generator",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						58
+					],
+					"name" : "opencv_annotation",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						59
+					],
+					"name" : "opencv_visualisation",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						62
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						60
+					],
+					"name" : "opencv_interactive-calibration",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						61
+					],
+					"name" : "opencv_version",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						58
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						62
+					],
+					"name" : "opencv_model_diagnostics",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						23
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "ade::@27c5111884336ecb361a",
+					"jsonFile" : "target-ade-Debug-8e9c368d39f3231d501e.json",
+					"name" : "ade",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bic-Debug-df72a2fba4308ff5a8a0.json",
+					"name" : "bic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "gen_opencv_java_source::@938f191a37a131753256",
+					"jsonFile" : "target-gen_opencv_java_source-Debug-7c124ff3f0eba90ada65.json",
+					"name" : "gen_opencv_java_source",
+					"projectIndex" : 22
+				},
+				{
+					"directoryIndex" : 52,
+					"id" : "gen_opencv_js_source::@bf8ada7c032b78de1a0e",
+					"jsonFile" : "target-gen_opencv_js_source-Debug-64d6895a2cd9be2a55b6.json",
+					"name" : "gen_opencv_js_source",
+					"projectIndex" : 23
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "gen_opencv_objc_source::@58d1d6d8bba9ed0c0690",
+					"jsonFile" : "target-gen_opencv_objc_source-Debug-79a19e5f8699e19eeb08.json",
+					"name" : "gen_opencv_objc_source",
+					"projectIndex" : 24
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "gen_opencv_objc_source_ios::@58d1d6d8bba9ed0c0690",
+					"jsonFile" : "target-gen_opencv_objc_source_ios-Debug-63596d5a01edc78b7210.json",
+					"name" : "gen_opencv_objc_source_ios",
+					"projectIndex" : 24
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "gen_opencv_objc_source_osx::@58d1d6d8bba9ed0c0690",
+					"jsonFile" : "target-gen_opencv_objc_source_osx-Debug-7733ca35e6d5059674b1.json",
+					"name" : "gen_opencv_objc_source_osx",
+					"projectIndex" : 24
+				},
+				{
+					"directoryIndex" : 54,
+					"id" : "gen_opencv_python_source::@9591d787f16c540e8fa6",
+					"jsonFile" : "target-gen_opencv_python_source-Debug-945d26a84c1cb0a5f7dc.json",
+					"name" : "gen_opencv_python_source",
+					"projectIndex" : 25
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ittnotify::@80be2ae5547b2ca7ac1c",
+					"jsonFile" : "target-ittnotify-Debug-169c28963dd47dd5899c.json",
+					"name" : "ittnotify",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "libprotobuf::@09c3d869de7670e311a3",
+					"jsonFile" : "target-libprotobuf-Debug-0c490b800b818b661575.json",
+					"name" : "libprotobuf",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 58,
+					"id" : "opencv_annotation::@4b63b93f893af88a0217",
+					"jsonFile" : "target-opencv_annotation-Debug-3030065874dc94dc0c50.json",
+					"name" : "opencv_annotation",
+					"projectIndex" : 26
+				},
+				{
+					"directoryIndex" : 44,
+					"id" : "opencv_calib3d::@0afade1af58f264b8428",
+					"jsonFile" : "target-opencv_calib3d-Debug-45442dc7c309e9a93549.json",
+					"name" : "opencv_calib3d",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 34,
+					"id" : "opencv_core::@30eeab53de96204393cd",
+					"jsonFile" : "target-opencv_core-Debug-04c3977dfba4c6444904.json",
+					"name" : "opencv_core",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 40,
+					"id" : "opencv_dnn::@051ee38054c377cc6d93",
+					"jsonFile" : "target-opencv_dnn-Debug-260e0b9d93fc5b49e45a.json",
+					"name" : "opencv_dnn",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 41,
+					"id" : "opencv_features2d::@49f00ecd1ea52d7d8a82",
+					"jsonFile" : "target-opencv_features2d-Debug-473d78905a746ecb70ab.json",
+					"name" : "opencv_features2d",
+					"projectIndex" : 12
+				},
+				{
+					"directoryIndex" : 35,
+					"id" : "opencv_flann::@f31311d7dec92c160d8d",
+					"jsonFile" : "target-opencv_flann-Debug-ee938659f38483e42ffe.json",
+					"name" : "opencv_flann",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 50,
+					"id" : "opencv_gapi::@e893f27d9a757d4c6553",
+					"jsonFile" : "target-opencv_gapi-Debug-f5525987893c31ceb6ac.json",
+					"name" : "opencv_gapi",
+					"projectIndex" : 21
+				},
+				{
+					"directoryIndex" : 45,
+					"id" : "opencv_highgui::@aff24c2a77688f40c5d7",
+					"jsonFile" : "target-opencv_highgui-Debug-e1f2b18e7f56a9590d9a.json",
+					"name" : "opencv_highgui",
+					"projectIndex" : 16
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "opencv_highgui_plugins::@27c5111884336ecb361a",
+					"jsonFile" : "target-opencv_highgui_plugins-Debug-7fc7238abb29621743a6.json",
+					"name" : "opencv_highgui_plugins",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 42,
+					"id" : "opencv_imgcodecs::@696f206e4347fa9dea70",
+					"jsonFile" : "target-opencv_imgcodecs-Debug-f75dcdd9bcefda108735.json",
+					"name" : "opencv_imgcodecs",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "opencv_imgproc::@5b0dd87d1f9c25b5ebae",
+					"jsonFile" : "target-opencv_imgproc-Debug-d2faace3a102d1991e76.json",
+					"name" : "opencv_imgproc",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 60,
+					"id" : "opencv_interactive-calibration::@fe277302f0ab3dc8990c",
+					"jsonFile" : "target-opencv_interactive-calibration-Debug-80c188987339f264f770.json",
+					"name" : "opencv_interactive-calibration",
+					"projectIndex" : 28
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "opencv_ml::@2af7cf77e475851cdd61",
+					"jsonFile" : "target-opencv_ml-Debug-0b4f22630456b061ea7a.json",
+					"name" : "opencv_ml",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 62,
+					"id" : "opencv_model_diagnostics::@5c6525d4760d10d36528",
+					"jsonFile" : "target-opencv_model_diagnostics-Debug-f7dd6e47a7df718fc625.json",
+					"name" : "opencv_model_diagnostics",
+					"projectIndex" : 30
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "opencv_modules::@27c5111884336ecb361a",
+					"jsonFile" : "target-opencv_modules-Debug-7e399149a373f823dd6b.json",
+					"name" : "opencv_modules",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "opencv_objdetect::@40bb71ace28e6455d2f5",
+					"jsonFile" : "target-opencv_objdetect-Debug-e8125496bcc94b1989ca.json",
+					"name" : "opencv_objdetect",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 44,
+					"id" : "opencv_perf_calib3d::@0afade1af58f264b8428",
+					"jsonFile" : "target-opencv_perf_calib3d-Debug-af282dde3d544ce6854c.json",
+					"name" : "opencv_perf_calib3d",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 34,
+					"id" : "opencv_perf_core::@30eeab53de96204393cd",
+					"jsonFile" : "target-opencv_perf_core-Debug-932db3a397a7fd9ff909.json",
+					"name" : "opencv_perf_core",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 40,
+					"id" : "opencv_perf_dnn::@051ee38054c377cc6d93",
+					"jsonFile" : "target-opencv_perf_dnn-Debug-ac3c3d780d581625ed3c.json",
+					"name" : "opencv_perf_dnn",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 41,
+					"id" : "opencv_perf_features2d::@49f00ecd1ea52d7d8a82",
+					"jsonFile" : "target-opencv_perf_features2d-Debug-9ddf938d881f1876fc34.json",
+					"name" : "opencv_perf_features2d",
+					"projectIndex" : 12
+				},
+				{
+					"directoryIndex" : 50,
+					"id" : "opencv_perf_gapi::@e893f27d9a757d4c6553",
+					"jsonFile" : "target-opencv_perf_gapi-Debug-8fd832d70af45891581a.json",
+					"name" : "opencv_perf_gapi",
+					"projectIndex" : 21
+				},
+				{
+					"directoryIndex" : 42,
+					"id" : "opencv_perf_imgcodecs::@696f206e4347fa9dea70",
+					"jsonFile" : "target-opencv_perf_imgcodecs-Debug-766a403b54368f10777d.json",
+					"name" : "opencv_perf_imgcodecs",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "opencv_perf_imgproc::@5b0dd87d1f9c25b5ebae",
+					"jsonFile" : "target-opencv_perf_imgproc-Debug-0e3d0225c731de3de1b6.json",
+					"name" : "opencv_perf_imgproc",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "opencv_perf_objdetect::@40bb71ace28e6455d2f5",
+					"jsonFile" : "target-opencv_perf_objdetect-Debug-fb2a4297f672507f3315.json",
+					"name" : "opencv_perf_objdetect",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 38,
+					"id" : "opencv_perf_photo::@1f0e31638fc17785eb05",
+					"jsonFile" : "target-opencv_perf_photo-Debug-fba3a5c74b286db960d7.json",
+					"name" : "opencv_perf_photo",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 47,
+					"id" : "opencv_perf_stitching::@b49c48aedc94d00bcdd3",
+					"jsonFile" : "target-opencv_perf_stitching-Debug-8033e22ec07fc2ff78fc.json",
+					"name" : "opencv_perf_stitching",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "opencv_perf_tests::@27c5111884336ecb361a",
+					"jsonFile" : "target-opencv_perf_tests-Debug-e265139632a885518b18.json",
+					"name" : "opencv_perf_tests",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "opencv_perf_video::@27afcac5aa93eff96fcb",
+					"jsonFile" : "target-opencv_perf_video-Debug-0b360a91eac2c8699753.json",
+					"name" : "opencv_perf_video",
+					"projectIndex" : 20
+				},
+				{
+					"directoryIndex" : 43,
+					"id" : "opencv_perf_videoio::@0a2123187874a03353a8",
+					"jsonFile" : "target-opencv_perf_videoio-Debug-de6859cd2101fc1f1942.json",
+					"name" : "opencv_perf_videoio",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 38,
+					"id" : "opencv_photo::@1f0e31638fc17785eb05",
+					"jsonFile" : "target-opencv_photo-Debug-79341710f8152008e373.json",
+					"name" : "opencv_photo",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 47,
+					"id" : "opencv_stitching::@b49c48aedc94d00bcdd3",
+					"jsonFile" : "target-opencv_stitching-Debug-5b04e3b0b0297644925e.json",
+					"name" : "opencv_stitching",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 44,
+					"id" : "opencv_test_calib3d::@0afade1af58f264b8428",
+					"jsonFile" : "target-opencv_test_calib3d-Debug-f481f2860b6acebfe68d.json",
+					"name" : "opencv_test_calib3d",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 34,
+					"id" : "opencv_test_core::@30eeab53de96204393cd",
+					"jsonFile" : "target-opencv_test_core-Debug-b16ed3c6005e99709e0d.json",
+					"name" : "opencv_test_core",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 40,
+					"id" : "opencv_test_dnn::@051ee38054c377cc6d93",
+					"jsonFile" : "target-opencv_test_dnn-Debug-a00a92ecfe32f2ebfead.json",
+					"name" : "opencv_test_dnn",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 41,
+					"id" : "opencv_test_features2d::@49f00ecd1ea52d7d8a82",
+					"jsonFile" : "target-opencv_test_features2d-Debug-e1c6bfdc3bf3caaeefcc.json",
+					"name" : "opencv_test_features2d",
+					"projectIndex" : 12
+				},
+				{
+					"directoryIndex" : 35,
+					"id" : "opencv_test_flann::@f31311d7dec92c160d8d",
+					"jsonFile" : "target-opencv_test_flann-Debug-8e47e1c876e653684582.json",
+					"name" : "opencv_test_flann",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 50,
+					"id" : "opencv_test_gapi::@e893f27d9a757d4c6553",
+					"jsonFile" : "target-opencv_test_gapi-Debug-0de84293b6d6f52f69d3.json",
+					"name" : "opencv_test_gapi",
+					"projectIndex" : 21
+				},
+				{
+					"directoryIndex" : 45,
+					"id" : "opencv_test_highgui::@aff24c2a77688f40c5d7",
+					"jsonFile" : "target-opencv_test_highgui-Debug-03f1ea3959b9f35b8fba.json",
+					"name" : "opencv_test_highgui",
+					"projectIndex" : 16
+				},
+				{
+					"directoryIndex" : 42,
+					"id" : "opencv_test_imgcodecs::@696f206e4347fa9dea70",
+					"jsonFile" : "target-opencv_test_imgcodecs-Debug-0165ccadd0a693f13f1b.json",
+					"name" : "opencv_test_imgcodecs",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "opencv_test_imgproc::@5b0dd87d1f9c25b5ebae",
+					"jsonFile" : "target-opencv_test_imgproc-Debug-b0a4ee76f248df27180d.json",
+					"name" : "opencv_test_imgproc",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "opencv_test_ml::@2af7cf77e475851cdd61",
+					"jsonFile" : "target-opencv_test_ml-Debug-effddd3017a5b9842c61.json",
+					"name" : "opencv_test_ml",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "opencv_test_objdetect::@40bb71ace28e6455d2f5",
+					"jsonFile" : "target-opencv_test_objdetect-Debug-d7371f93d42cd00d554d.json",
+					"name" : "opencv_test_objdetect",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 38,
+					"id" : "opencv_test_photo::@1f0e31638fc17785eb05",
+					"jsonFile" : "target-opencv_test_photo-Debug-445ac9257015f55c8464.json",
+					"name" : "opencv_test_photo",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 47,
+					"id" : "opencv_test_stitching::@b49c48aedc94d00bcdd3",
+					"jsonFile" : "target-opencv_test_stitching-Debug-c0704f5f9be788ae70a1.json",
+					"name" : "opencv_test_stitching",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "opencv_test_video::@27afcac5aa93eff96fcb",
+					"jsonFile" : "target-opencv_test_video-Debug-4f206a2defe531f31dac.json",
+					"name" : "opencv_test_video",
+					"projectIndex" : 20
+				},
+				{
+					"directoryIndex" : 43,
+					"id" : "opencv_test_videoio::@0a2123187874a03353a8",
+					"jsonFile" : "target-opencv_test_videoio-Debug-d25bf1795b31d8991359.json",
+					"name" : "opencv_test_videoio",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "opencv_tests::@27c5111884336ecb361a",
+					"jsonFile" : "target-opencv_tests-Debug-caf78d1a7acb012fb5a3.json",
+					"name" : "opencv_tests",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 48,
+					"id" : "opencv_ts::@b5bdd7977454f17d1223",
+					"jsonFile" : "target-opencv_ts-Debug-e89449947ff5c19088ba.json",
+					"name" : "opencv_ts",
+					"projectIndex" : 19
+				},
+				{
+					"directoryIndex" : 61,
+					"id" : "opencv_version::@d3827a4f0f304fcf7d2d",
+					"jsonFile" : "target-opencv_version-Debug-a0d069fd06f193d81730.json",
+					"name" : "opencv_version",
+					"projectIndex" : 29
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "opencv_video::@27afcac5aa93eff96fcb",
+					"jsonFile" : "target-opencv_video-Debug-eddfd875dba0ddf8cbd9.json",
+					"name" : "opencv_video",
+					"projectIndex" : 20
+				},
+				{
+					"directoryIndex" : 43,
+					"id" : "opencv_videoio::@0a2123187874a03353a8",
+					"jsonFile" : "target-opencv_videoio-Debug-4736cb3b21520916cd61.json",
+					"name" : "opencv_videoio",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 32,
+					"id" : "opencv_videoio_plugins::@03d1ba6cbbcc200dd1c8",
+					"jsonFile" : "target-opencv_videoio_plugins-Debug-a0a5e730d9b598e9a455.json",
+					"name" : "opencv_videoio_plugins",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 59,
+					"id" : "opencv_visualisation::@aa8e784c421159abf8d5",
+					"jsonFile" : "target-opencv_visualisation-Debug-863755da88e008aefc3e.json",
+					"name" : "opencv_visualisation",
+					"projectIndex" : 27
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "quirc::@801d15ed7d5c8a805fa3",
+					"jsonFile" : "target-quirc-Debug-f529a3be485e19bc28d5.json",
+					"name" : "quirc",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@27c5111884336ecb361a",
+					"jsonFile" : "target-uninstall-Debug-7a49e10a8b1908ff1e15.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dexer/Repos/cpp/bic/build",
+		"source" : "/home/dexer/Repos/cpp/bic"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

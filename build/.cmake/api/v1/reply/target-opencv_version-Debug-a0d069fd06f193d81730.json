@@ -1,0 +1,272 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "bin/opencv_version"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"ocv_add_executable",
+			"ocv_add_application",
+			"install",
+			"target_link_libraries",
+			"__ocv_push_target_link_libraries",
+			"ocv_target_link_libraries",
+			"add_definitions",
+			"target_include_directories",
+			"_ocv_append_target_includes",
+			"include_directories",
+			"ocv_include_directories"
+		],
+		"files" : 
+		[
+			"build/_deps/opencv-src/cmake/OpenCVUtils.cmake",
+			"build/_deps/opencv-src/apps/CMakeLists.txt",
+			"build/_deps/opencv-src/apps/version/CMakeLists.txt",
+			"build/_deps/opencv-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 18,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1536,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 1496,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 1466,
+				"parent" : 6
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 2,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 8
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 1537,
+				"parent" : 2
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 1515,
+				"parent" : 11
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 600,
+				"parent" : 13
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 312,
+				"parent" : 14
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG -std=c++11 -fPIE"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "__OPENCV_APPS=1"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "__OPENCV_BUILD=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 12,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/core/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/apps/version/PRIVATE"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/include/opencv"
+				},
+				{
+					"backtrace" : 15,
+					"isSystem" : true,
+					"path" : "/home/dexer/Repos/cpp/bic/build"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 7,
+			"id" : "opencv_core::@30eeab53de96204393cd"
+		}
+	],
+	"id" : "opencv_version::@d3827a4f0f304fcf7d2d",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 4,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/dexer/Repos/cpp/bic/build/_deps/opencv-build/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "../../lib/libopencv_core.so.4.6.0",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "opencv_version",
+	"nameOnDisk" : "opencv_version",
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/apps/version",
+		"source" : "build/_deps/opencv-src/apps/version"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/apps/version/opencv_version.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

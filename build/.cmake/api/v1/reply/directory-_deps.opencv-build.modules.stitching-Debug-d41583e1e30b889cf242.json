@@ -1,0 +1,335 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"ocv_install_target",
+			"_ocv_create_module",
+			"ocv_create_module",
+			"ocv_define_module"
+		],
+		"files" : 
+		[
+			"build/_deps/opencv-src/cmake/OpenCVUtils.cmake",
+			"build/_deps/opencv-src/cmake/OpenCVModule.cmake",
+			"build/_deps/opencv-src/modules/stitching/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1108,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 882,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1041,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1224,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1048,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 5,
+			"component" : "libs",
+			"destination" : "lib",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_stitching.so.4.6.0",
+				"_deps/opencv-build/lib/libopencv_stitching.so.406"
+			],
+			"targetId" : "opencv_stitching::@b49c48aedc94d00bcdd3",
+			"targetIndex" : 40,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "dev",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_stitching.so"
+			],
+			"targetId" : "opencv_stitching::@b49c48aedc94d00bcdd3",
+			"targetIndex" : 40,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/autocalib.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/blenders.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/camera.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/matchers.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/motion_estimators.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/seam_finders.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/timelapsers.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/util.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 17,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/util_inl.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/warpers.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 19,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/detail/warpers_inl.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/stitching",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/stitching/include/opencv2/stitching/warpers.hpp"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/modules/stitching",
+		"source" : "build/_deps/opencv-src/modules/stitching"
+	}
+}

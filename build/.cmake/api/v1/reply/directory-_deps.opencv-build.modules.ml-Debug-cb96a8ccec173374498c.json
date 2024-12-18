@@ -1,0 +1,148 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"ocv_install_target",
+			"_ocv_create_module",
+			"ocv_create_module",
+			"ocv_define_module"
+		],
+		"files" : 
+		[
+			"build/_deps/opencv-src/cmake/OpenCVUtils.cmake",
+			"build/_deps/opencv-src/cmake/OpenCVModule.cmake",
+			"build/_deps/opencv-src/modules/ml/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1108,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 882,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1041,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1224,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1048,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 5,
+			"component" : "libs",
+			"destination" : "lib",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_ml.so.4.6.0",
+				"_deps/opencv-build/lib/libopencv_ml.so.406"
+			],
+			"targetId" : "opencv_ml::@2af7cf77e475851cdd61",
+			"targetIndex" : 22,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "dev",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_ml.so"
+			],
+			"targetId" : "opencv_ml::@2af7cf77e475851cdd61",
+			"targetIndex" : 22,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/ml/include/opencv2/ml.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/ml",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/ml/include/opencv2/ml/ml.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/ml",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/ml/include/opencv2/ml/ml.inl.hpp"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/modules/ml",
+		"source" : "build/_deps/opencv-src/modules/ml"
+	}
+}

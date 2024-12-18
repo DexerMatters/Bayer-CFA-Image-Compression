@@ -1,0 +1,277 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"ocv_install_target",
+			"_ocv_create_module",
+			"ocv_create_module"
+		],
+		"files" : 
+		[
+			"build/_deps/opencv-src/cmake/OpenCVUtils.cmake",
+			"build/_deps/opencv-src/cmake/OpenCVModule.cmake",
+			"build/_deps/opencv-src/modules/dnn/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 187,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 882,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1041,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1224,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1048,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 4,
+			"component" : "libs",
+			"destination" : "lib",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_dnn.so.4.6.0",
+				"_deps/opencv-build/lib/libopencv_dnn.so.406"
+			],
+			"targetId" : "opencv_dnn::@051ee38054c377cc6d93",
+			"targetIndex" : 13,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "dev",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_dnn.so"
+			],
+			"targetId" : "opencv_dnn::@051ee38054c377cc6d93",
+			"targetIndex" : 13,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/all_layers.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/dict.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/dnn.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/dnn.inl.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/layer.details.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/layer.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/shape_utils.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn/utils",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/utils/debug_utils.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn/utils",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/utils/inference_engine.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/dnn",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/dnn/include/opencv2/dnn/version.hpp"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/modules/dnn",
+		"source" : "build/_deps/opencv-src/modules/dnn"
+	}
+}

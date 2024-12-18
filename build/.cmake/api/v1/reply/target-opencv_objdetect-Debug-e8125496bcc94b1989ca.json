@@ -1,0 +1,633 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/opencv-build/lib/libopencv_objdetect.so"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"ocv_add_library",
+			"_ocv_create_module",
+			"ocv_create_module",
+			"ocv_define_module",
+			"install",
+			"ocv_install_target",
+			"target_link_libraries",
+			"__ocv_push_target_link_libraries",
+			"ocv_target_link_libraries",
+			"add_definitions",
+			"ocv_add_module",
+			"include_directories",
+			"ocv_include_directories",
+			"target_include_directories",
+			"_ocv_append_target_includes"
+		],
+		"files" : 
+		[
+			"build/_deps/opencv-src/cmake/OpenCVUtils.cmake",
+			"build/_deps/opencv-src/cmake/OpenCVModule.cmake",
+			"build/_deps/opencv-src/modules/objdetect/CMakeLists.txt",
+			"build/_deps/opencv-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1108,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 882,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 966,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1547,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 1041,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 1224,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 1048,
+				"parent" : 3
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 976,
+				"parent" : 3
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 1482,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1466,
+				"parent" : 10
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 982,
+				"parent" : 3
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 1496,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1466,
+				"parent" : 13
+			},
+			{
+				"command" : 9,
+				"file" : 2,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 1496,
+				"parent" : 15
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1466,
+				"parent" : 16
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 1105,
+				"parent" : 1
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 217,
+				"parent" : 18
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 910,
+				"parent" : 3
+			},
+			{
+				"command" : 13,
+				"file" : 2,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 315,
+				"parent" : 21
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 1578,
+				"parent" : 4
+			},
+			{
+				"command" : 14,
+				"file" : 0,
+				"line" : 1515,
+				"parent" : 23
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 13,
+				"file" : 3,
+				"line" : 600,
+				"parent" : 25
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 312,
+				"parent" : 26
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG -std=c++11 -fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "CVAPI_EXPORTS"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "__OPENCV_BUILD=1"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 22,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/3rdparty/quirc/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/objdetect/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-build/modules/objdetect"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/core/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/flann/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/imgproc/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/dnn/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/features2d/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/dexer/Repos/cpp/bic/build/_deps/opencv-src/modules/calib3d/include"
+				},
+				{
+					"backtrace" : 27,
+					"isSystem" : true,
+					"path" : "/home/dexer/Repos/cpp/bic/build"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					5
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				15
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 17,
+			"id" : "quirc::@801d15ed7d5c8a805fa3"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "opencv_core::@30eeab53de96204393cd"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "opencv_flann::@f31311d7dec92c160d8d"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "opencv_imgproc::@5b0dd87d1f9c25b5ebae"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "opencv_dnn::@051ee38054c377cc6d93"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "opencv_features2d::@49f00ecd1ea52d7d8a82"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "opencv_calib3d::@0afade1af58f264b8428"
+		}
+	],
+	"id" : "opencv_objdetect::@40bb71ace28e6455d2f5",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 7,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 8,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/dexer/Repos/cpp/bic/build/_deps/opencv-build/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "../../lib/libopencv_dnn.so.4.6.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "../../lib/libopencv_calib3d.so.4.6.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 17,
+				"fragment" : "../../3rdparty/lib/libquirc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "../../lib/libopencv_features2d.so.4.6.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "../../lib/libopencv_flann.so.4.6.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "../../lib/libopencv_imgproc.so.4.6.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "../../lib/libopencv_core.so.4.6.0",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "opencv_objdetect",
+	"nameOnDisk" : "libopencv_objdetect.so",
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/modules/objdetect",
+		"source" : "build/_deps/opencv-src/modules/objdetect"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Include\\opencv2",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "Include\\opencv2\\objdetect",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"name" : "Src",
+			"sourceIndexes" : 
+			[
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				17,
+				18,
+				19
+			]
+		},
+		{
+			"name" : "Src\\opencl\\kernels",
+			"sourceIndexes" : 
+			[
+				13,
+				14
+			]
+		},
+		{
+			"name" : "Src\\opencl\\kernels\\autogenerated",
+			"sourceIndexes" : 
+			[
+				15,
+				16
+			]
+		},
+		{
+			"name" : "Include",
+			"sourceIndexes" : 
+			[
+				20,
+				21
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				22
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/include/opencv2/objdetect.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/include/opencv2/objdetect/detection_based_tracker.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/include/opencv2/objdetect/face.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/include/opencv2/objdetect/objdetect.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/cascadedetect.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/cascadedetect_convert.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/detection_based_tracker.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/face_detect.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/face_recognize.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/hog.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/main.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/qrcode.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/qrcode_encoder.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/opencl/cascadedetect.cl",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/opencl/objdetect_hog.cl",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-build/modules/objdetect/opencl_kernels_objdetect.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 5,
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-build/modules/objdetect/opencl_kernels_objdetect.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/cascadedetect.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/precomp.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/_deps/opencv-src/modules/objdetect/src/qrcode_encoder_table.inl.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/cvconfig.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 5,
+			"path" : "build/opencv2/opencv_modules.hpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-build/modules/objdetect/opencl_kernels_objdetect.cpp.rule",
+			"sourceGroupIndex" : 6
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

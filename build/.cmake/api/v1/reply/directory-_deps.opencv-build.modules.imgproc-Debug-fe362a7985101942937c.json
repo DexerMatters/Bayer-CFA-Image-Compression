@@ -1,0 +1,250 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"ocv_install_target",
+			"_ocv_create_module",
+			"ocv_create_module",
+			"ocv_define_module"
+		],
+		"files" : 
+		[
+			"build/_deps/opencv-src/cmake/OpenCVUtils.cmake",
+			"build/_deps/opencv-src/cmake/OpenCVModule.cmake",
+			"build/_deps/opencv-src/modules/imgproc/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1108,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 882,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1041,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1224,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1048,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 1059,
+				"parent" : 3
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 5,
+			"component" : "libs",
+			"destination" : "lib",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_imgproc.so.4.6.0",
+				"_deps/opencv-build/lib/libopencv_imgproc.so.406"
+			],
+			"targetId" : "opencv_imgproc::@5b0dd87d1f9c25b5ebae",
+			"targetIndex" : 20,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "dev",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"_deps/opencv-build/lib/libopencv_imgproc.so"
+			],
+			"targetId" : "opencv_imgproc::@5b0dd87d1f9c25b5ebae",
+			"targetIndex" : 20,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/bindings.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc/detail",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/detail/gcgraph.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc/hal",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/hal/hal.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc/hal",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/hal/interface.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/imgproc.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/imgproc_c.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/segmentation.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "dev",
+			"destination" : "include/opencv4/opencv2/imgproc",
+			"isOptional" : true,
+			"paths" : 
+			[
+				"build/_deps/opencv-src/modules/imgproc/include/opencv2/imgproc/types_c.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/opencv-build/modules/imgproc",
+		"source" : "build/_deps/opencv-src/modules/imgproc"
+	}
+}

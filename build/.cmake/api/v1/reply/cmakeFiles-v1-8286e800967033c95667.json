@@ -1,0 +1,1323 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/3.31.2/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/3.31.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FetchContent.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindGit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVMinDepVersions.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeParseArguments.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/vars/EnableModeVars.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/platforms/OpenCV-Linux.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVDownload.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVDetectCXXCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/core/include/opencv2/core/version.hpp"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVInstallLayout.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindGit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVDetectPython.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPythonInterp.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVCompilerOptions.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVCompilerOptimizations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckFunctionExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckSymbolExists.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVPCHSupport.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVModule.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/TestBigEndian.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckTypeSize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindFrameworks.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindLibsGrfmt.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindZLIB.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindJPEG.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindTIFF.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindWebP.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/openjpeg-2.5/OpenJPEGConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/openjpeg-2.5/OpenJPEGConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/openjpeg-2.5/OpenJPEGTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/openjpeg-2.5/OpenJPEGTargets-none.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPNG.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindZLIB.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindOpenEXR.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/OpenEXR/OpenEXRConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/OpenEXR/OpenEXRConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/Imath/ImathConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/Imath/ImathConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/Imath/ImathTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/Imath/ImathTargets-release.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/libdeflate/libdeflate-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/libdeflate/libdeflate-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/libdeflate/libdeflate-targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/libdeflate/libdeflate-targets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/OpenEXR/OpenEXRTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/OpenEXR/OpenEXRTargets-none.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindLibsGUI.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindLibsVideo.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindVA.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindLibsPerf.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindIPP.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/3rdparty/ippicv/ippicv.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindLAPACK.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindMKL.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindOpenBLAS.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindAtlas.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindLAPACK.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckFunctionExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindBLAS.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckFunctionExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVFindProtobuf.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVDetectApacheAnt.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindJNI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakePushCheckState.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeFindJavaCommon.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVDetectOpenCL.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/checks/opencl.cpp"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVDetectVTK.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/custom_hal.hpp.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVDetectTrace.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVExtraTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/cmake_uninstall.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/gapi/cmake/init.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/gapi/cmake/DownloadADE.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/highgui/cmake/init.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/highgui/cmake/detect_gtk.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/cmake/init.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/cmake/detect_ffmpeg.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/checks/ffmpeg_test.cpp"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/cmake/detect_gstreamer.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/cmake/detect_v4l.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/cmake/detect_dc1394.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVGenHeaders.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/cvconfig.h.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/cvconfig.h.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/cv_cpu_config.h.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/opencv_modules.hpp.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVGenAndroidMK.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVGenConfig.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/OpenCVConfig.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/OpenCVConfig-version.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/OpenCVConfig-version.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/OpenCVConfig.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVGenABI.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVGenSetupVars.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/setup_vars_linux.sh.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/templates/setup_vars_linux.sh.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/cmake/OpenCVPackaging.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CPack.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CPackComponent.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/3rdparty/protobuf/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFiles.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/3rdparty/quirc/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/3rdparty/ittnotify/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/include/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/calib3d/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/core/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/dnn/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/features2d/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/flann/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/gapi/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/highgui/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/imgcodecs/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/imgproc/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/java/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/java/generator/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/js/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/js/generator/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/ml/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/objc/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/objc/generator/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/objdetect/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/photo/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/bindings/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/test/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/python2/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/python3/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/stitching/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/ts/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/video/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/world/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/core/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/flann/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/imgproc/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/ml/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/photo/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/test/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/dnn/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/dnn/cmake/hooks/INIT_MODULE_SOURCES_opencv_dnn.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/features2d/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/imgcodecs/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/videoio/cmake/plugin.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/calib3d/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/highgui/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/highgui/cmake/plugin.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/objdetect/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/stitching/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/ts/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/video/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/gapi/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/java/generator/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/java/common.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/java/generator/android/java/org/opencv/android/OpenCVLoader.java.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/java/generator/src/java/org/opencv/osgi/OpenCVNativeLoader.java.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/core/misc/java/src/java/core+Core.jcode.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/js/generator/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/js/common.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/objc/generator/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/objc/common.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/bindings/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/python_loader.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/package/setup.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/package/cv2/__init__.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/package/cv2/load_config_py2.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/package/cv2/load_config_py3.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/package/template/config.py.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/package/extra_modules/misc/__init__.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/python/package/extra_modules/misc/version.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/core/misc/python/package/mat_wrapper/__init__.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/core/misc/python/package/utils/__init__.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/modules/gapi/misc/python/package/gapi/__init__.py"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/doc/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/data/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/apps/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/apps/annotation/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/apps/visualisation/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/apps/interactive-calibration/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/apps/version/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/opencv-src/apps/model-diagnostics/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/dexer/Repos/cpp/bic/build",
+		"source" : "/home/dexer/Repos/cpp/bic"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}
