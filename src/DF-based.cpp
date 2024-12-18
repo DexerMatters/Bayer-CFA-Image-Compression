@@ -63,6 +63,16 @@ float Distortion_(Vec4f &Cb, Vec4f &Cr, float Cb_s, float Cr_s) {
   return SUM4(Sq(e_a[i] * (Cb[i] - Cb_s) + e_b[i] * (Cr[i] - Cr_s)));
 };
 
+std::array<float, 2> OptimalRounding(Vec4f &Cb, Vec4f &Cr,
+                                     std::map<float, float> &&cands) {
+  auto best =
+      std::min_element(cands.begin(), cands.end(), [&](auto &a, auto &b) {
+        return Distortion_(Cb, Cr, a.first, a.second) <
+               Distortion_(Cb, Cr, b.first, b.second);
+      });
+  return {best->first, best->second};
+}
+
 // Chroma subsampling
 
 // Subsampling 4:2:0(D)
@@ -189,31 +199,27 @@ void SubsampleChroma_PD_Modified420A_COPY(const Mat &ycbcrImage, Mat &dest) {
                ycbcrImage.at<Vec3b>(i + 1, j + 1)[2]);
       float Cb_s = SUM4(Cb[i]) / 4.0;
       float Cr_s = SUM4(Cr[i]) / 4.0;
-      std::map<float, float> cands = {{floorf(Cb_s), floorf(Cr_s)},
-                                      {floorf(Cb_s), ceilf(Cr_s)},
-                                      {ceilf(Cb_s), floorf(Cr_s)},
-                                      {ceilf(Cb_s), ceilf(Cr_s)}};
 
       // Find the best candidate by minimizing the distortion
-      auto best =
-          std::min_element(cands.begin(), cands.end(), [&](auto &a, auto &b) {
-            return Distortion_(Cb, Cr, a.first, a.second) <
-                   Distortion_(Cb, Cr, b.first, b.second);
-          });
+      auto [Cb_best, Cr_best] = OptimalRounding(Cb, Cr,
+                                                {{floorf(Cb_s), floorf(Cr_s)},
+                                                 {floorf(Cb_s), ceilf(Cr_s)},
+                                                 {ceilf(Cb_s), floorf(Cr_s)},
+                                                 {ceilf(Cb_s), ceilf(Cr_s)}});
       auto Y_s = Subsampling420A(ycbcrImage(Rect(j, i, 2, 2)))[0];
-      dest.at<Vec3b>(i / 2, j / 2) = Vec3b(Y_s, best->first, best->second);
+      dest.at<Vec3b>(i / 2, j / 2) = Vec3b(Y_s, Cb_best, Cr_best);
     }
   }
 }
 
-void SubsampleChroma_PD_BIDM(const Mat &ycbcrImage, Mat &dest,
-                             Vec3b (*subsampling)(const Mat &)) {
+void SubsampleChroma_PD_BIDM(const Mat &ycbcrImage, Mat &dest) {
 
   // Auxiliar functions
   auto averge = [](float a, float b, float c) {
     constexpr float _16 = 1.0 / 16.0;
     return _16 * a + 3 * _16 * b + 3 * _16 * c;
   };
+
   auto sub = [](Vec4f &Cr_b, Vec4f &Cb_b, Vec4f &Cr,
                 Vec4f &Cb) -> std::array<float, 2> {
     auto &a = e_a;
@@ -240,14 +246,14 @@ void SubsampleChroma_PD_BIDM(const Mat &ycbcrImage, Mat &dest,
 
   // Extend four borders of the YCbCr image by 2 pixels
   Mat image;
-  copyMakeBorder(ycbcrImage, image, 2, 2, 2, 2, BORDER_REFLECT);
+  copyMakeBorder(ycbcrImage, image, 2, 2, 2, 2, BORDER_REPLICATE);
 
   auto mark = Mat_<bool>(image.rows / 2, image.cols / 2);
   dest = Mat(ycbcrImage.rows / 2, ycbcrImage.cols / 2, CV_8UC3);
 
   // Subsample the chroma channels
   Mat default_s;
-  SubsampleChroma_PI(image, default_s, subsampling);
+  SubsampleChroma_PI(image, default_s, Subsampling420A);
 
   for (int i = 2; i < image.rows - 2; i += 2) {
     for (int j = 2; j < image.cols - 2; j += 2) {
@@ -329,12 +335,12 @@ void SubsampleChroma_PD_BIDM(const Mat &ycbcrImage, Mat &dest,
         }
 
 
-        // TODO: Compare the floored and ceiled finals
-
-
         dest.at<Vec3b>(i_dest, j_dest) =
             Vec3b(default_s.at<Vec3b>(i_, j_)[0], Cb_s_final, Cr_s_final);
       }
+
+      // Mark the block as processed
+      mark.at<bool>(i_, j_) = true;
     }
   }
 }

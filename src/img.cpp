@@ -159,6 +159,9 @@ cv::Mat DumpRAW(LibRaw &rawProcessor, cv::Mat &demoImage,
   rawProcessor.recycle();
   rawProcessor.open_file(filename.c_str());
   rawProcessor.unpack();
+  rawProcessor.imgdata.params.gamm[0] = 1.0 / 2.4;
+  rawProcessor.imgdata.params.gamm[1] = 12.92;
+  rawProcessor.imgdata.params.no_auto_bright = 1;
   rawProcessor.dcraw_process();
   auto processed = rawProcessor.dcraw_make_mem_image();
   demoImage =
@@ -169,7 +172,6 @@ cv::Mat DumpRAW(LibRaw &rawProcessor, cv::Mat &demoImage,
   height = processed->height;
 
   cv::Mat img = cv::Mat(height, width, CV_8U);
-  ushort(*imgData)[4] = rawProcessor.imgdata.image;
   for (int i = 0; i < height - 1; i += 2) {
     for (int j = 0; j < width - 1; j += 2) {
       // GBRG

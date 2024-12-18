@@ -31,21 +31,21 @@ void LumaModification(const Mat &ycbcrImage, const Mat &bayerImage,
                (GRBG[1] - 1.596 * (Cr - 128)) / 1.164 + 16,
                (GRBG[2] - 2.018 * (Cb - 128)) / 1.164 + 16,
                (GRBG[3] + 0.391 * (Cb - 128) + 0.813 * (Cr - 128)) / 1.164 + 16);
+      auto y = ycbcrImage.at<Vec3b>(i, j)[0];
       // clang-format on
 
       // Candidate Ys
 
       std::map<int, float> Ys_ = {
-          {0, floorf(Ys[0])}, {0, ceilf(Ys[0])}, {0, floorf(Ys[0]) + 1},
-          {1, floorf(Ys[1])}, {1, ceilf(Ys[1])}, {1, floorf(Ys[1]) + 1},
-          {2, floorf(Ys[2])}, {2, ceilf(Ys[2])}, {2, floorf(Ys[2]) + 1},
-          {3, floorf(Ys[3])}, {3, ceilf(Ys[3])}, {3, floorf(Ys[3]) + 1},
+          {0, floorf(Ys[0])}, {0, ceilf(Ys[0])},  {1, floorf(Ys[1])},
+          {1, ceilf(Ys[1])},  {2, floorf(Ys[2])}, {2, ceilf(Ys[2])},
+          {3, floorf(Ys[3])}, {3, ceilf(Ys[3])},
       };
 
       auto best = std::min_element(
           Ys_.begin(), Ys_.end(),
           [&](const std::pair<int, float> &a, const std::pair<int, float> &b) {
-            return PixelDistortion(a.first, GRBG, a.second, Cr, Cb) <
+            return PixelDistortion(a.first, GRBG, a.second, Cr, Cb) >
                    PixelDistortion(b.first, GRBG, b.second, Cr, Cb);
           });
 

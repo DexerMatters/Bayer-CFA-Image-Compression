@@ -21,5 +21,4 @@ void SubsampleChroma_PD_CDM(
     cv::Vec3b (*subsampling)(const cv::Mat &) = nullptr);
 void SubsampleChroma_PD_Modified420A_COPY(const cv::Mat &ycbcrImage,
                                           cv::Mat &dest);
-void SubsampleChroma_PD_BIDM(const cv::Mat &ycbcrImage, cv::Mat &dest,
-                             cv::Vec3b (*subsampling)(const cv::Mat &));
+void SubsampleChroma_PD_BIDM(const cv::Mat &ycbcrImage, cv::Mat &dest);
