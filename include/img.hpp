@@ -9,6 +9,10 @@ void BGR2YCbCr(const cv::Mat &bgrImage, cv::Mat &ycbcrImage);
 
 void YCbCr2BGR(const cv::Mat &ycbcrImage, cv::Mat &bgrImage);
 
+void UpsampledBGR2Bayer(const cv::Mat &bgrImage, cv::Mat &upsampledBayerImage);
+
+double NoiseEstimation(const cv::Mat &bayerImage);
+
 // BMP Processing
 struct BmpFileHeader {
   uint16_t fileType{0x4D42}; // File type always BM which is 0x4D42

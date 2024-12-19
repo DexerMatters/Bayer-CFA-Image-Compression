@@ -46,9 +46,10 @@ void LumaModification(const Mat &ycbcrImage, const Mat &bayerImage,
       auto best = std::min_element(
           Ys_.begin(), Ys_.end(),
           [&](const std::pair<int, float> &a, const std::pair<int, float> &b) {
-            return PixelDistortion(a.first, GRBG, a.second, Cr, Cb) >
+            return PixelDistortion(a.first, GRBG, a.second, Cr, Cb) <
                    PixelDistortion(b.first, GRBG, b.second, Cr, Cb);
           });
+      auto Y_o = subsampledImage.at<Vec3b>(i / 2, j / 2)[0];
       // Update the ycbrImage
       subsampledImage.at<Vec3b>(i / 2, j / 2)[0] = NORMALIZE(best->second);
     }

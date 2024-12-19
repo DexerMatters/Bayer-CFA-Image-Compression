@@ -302,9 +302,15 @@ void SubsampleChroma_PD_BIDM(const Mat &ycbcrImage, Mat &dest) {
           Cr_s_final = Cr_s_;
         }
 
+        auto [Cb_best, Cr_best] = OptimalRounding(Cb, Cr,
+                                                  {{floorf(Cb_s_final), floorf(Cr_s_final)},
+                                                   {floorf(Cb_s_final), ceilf(Cr_s_final)},
+                                                   {ceilf(Cb_s_final), floorf(Cr_s_final)},
+                                                   {ceilf(Cb_s_final), ceilf(Cr_s_final)}});
+
 
         dest.at<Vec3b>(i_dest, j_dest) =
-            Vec3b(default_s.at<Vec3b>(i_, j_)[0], Cb_s_final, Cr_s_final);
+            Vec3b(default_s.at<Vec3b>(i_, j_)[0], Cb_best, Cr_best);
       }
 
       // Mark the block as processed

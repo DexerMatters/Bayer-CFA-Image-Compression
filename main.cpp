@@ -13,17 +13,14 @@
 
 int testn = 0;
 
-void eval(double time, const cv::Mat &i_s_rgb, const cv::Mat &i_demo_rgb) {
+void eval(double time, const cv::Mat &i2, const cv::Mat &i1) {
   cv::OutputArray qualityMap = cv::noArray();
-  cv::Mat i_s_scaled;
-  cv::resize(i_s_rgb, i_s_scaled, i_demo_rgb.size(), 0, 0,
-             cv::InterpolationFlags::INTER_LINEAR);
-  auto MSE =
-      cv::quality::QualityMSE::compute(i_s_scaled, i_demo_rgb, qualityMap);
-  auto PSNR =
-      cv::quality::QualityPSNR::compute(i_s_scaled, i_demo_rgb, qualityMap);
-  auto SSIM =
-      cv::quality::QualitySSIM::compute(i_s_scaled, i_demo_rgb, qualityMap);
+  // Size unification
+  cv::Mat resized;
+  cv::resize(i2, resized, i1.size());
+  auto MSE = cv::quality::QualityMSE::compute(resized, i1, qualityMap);
+  auto PSNR = cv::quality::QualityPSNR::compute(resized, i1, qualityMap);
+  auto SSIM = cv::quality::QualitySSIM::compute(resized, i1, qualityMap);
   printf(R"(
   TIME: %f
   MSE: %f
@@ -55,6 +52,7 @@ void test(LibRaw &rawProcessor, const std::string &filename,
   // Convert the RGB image to YCbCr
   cv::Mat i_YCbCr;
   cv::Mat i_YCbCr_subsampled;
+  cv::Mat i_bayer_upsampled;
   cv::Mat i_s_rgb;
   BGR2YCbCr(i_demo_rgb, i_YCbCr);
 
@@ -73,31 +71,33 @@ void test(LibRaw &rawProcessor, const std::string &filename,
   // cv::cvtColor(i_YCbCr_subsampled, i_s_rgb, cv::COLOR_YCrCb2BGR);
   // eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
 
-  // std::cout << ">>> Method 3: SubsampleChroma_PD_Modified420A_COPY"
-  //           << std::endl;
-  // start = clock();
-  // SubsampleChroma_PD_Modified420A_COPY(i_YCbCr, i_YCbCr_subsampled);
-  // end = clock();
-  // cv::cvtColor(i_YCbCr_subsampled, i_s_rgb, cv::COLOR_YCrCb2BGR);
-  // eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
+  std::cout << ">>> Method 3: SubsampleChroma_PD_Modified420A_COPY"
+            << std::endl;
+  start = clock();
+  SubsampleChroma_PD_Modified420A_COPY(i_YCbCr, i_YCbCr_subsampled);
+  end = clock();
+  YCbCr2BGR(i_YCbCr_subsampled, i_s_rgb);
+  eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
 
   // std::cout << ">>> Method 4: SubsampleChroma_PD_CDM" << std::endl;
   // start = clock();
   // SubsampleChroma_PD_CDM(i_YCbCr, i_YCbCr_subsampled, Subsampling420A);
   // end = clock();
-  // cv::cvtColor(i_YCbCr_subsampled, i_s_rgb, cv::COLOR_YCrCb2BGR);
+  // YCbCr2BGR(i_YCbCr_subsampled, i_s_rgb);
   // eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
+  // i_YCbCr_subsampled.release();
+  // i_s_rgb.release();
 
-  std::cout << ">>> Method 5: SubsampleChroma_PD_BIDM" << std::endl;
-  start = clock();
+  // std::cout << ">>> Method 5: SubsampleChroma_PD_BIDM" << std::endl;
+  // start = clock();
   // SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
-  end = clock();
-  // SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
+  // // LumaModification(i_YCbCr, i_bayer, i_YCbCr_subsampled);
+  // end = clock();
+  // // SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
 
-  YCbCr2BGR(i_YCbCr, i_s_rgb);
-  cv::imshow("Demo", i_demo_rgb);
-  cv::waitKey(0);
-  eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
+  // YCbCr2BGR(i_YCbCr_subsampled, i_s_rgb);
+  // // UpsampledBGR2Bayer(i_s_rgb, i_bayer_upsampled);
+  // eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
 }
 
 int main(int, char **) {

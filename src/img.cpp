@@ -11,7 +11,7 @@ void BGR2YCbCr(const cv::Mat &bgrImage, cv::Mat &ycbcrImage) {
   ycbcrImage = cv::Mat(bgrImage.size(), CV_8UC3);
   for (int i = 0; i < bgrImage.rows; i++) {
     for (int j = 0; j < bgrImage.cols; j++) {
-      cv::Vec3f bgr = bgrImage.at<cv::Vec3b>(i, j);
+      cv::Vec3b bgr = bgrImage.at<cv::Vec3b>(i, j);
       cv::Matx31f rgb(bgr[2], bgr[1], bgr[0]);
       cv::Matx31f ycbcr = K * rgb + bias;
       ycbcrImage.at<cv::Vec3b>(i, j)[0] = NORMALIZE(ycbcr(0));
@@ -22,20 +22,38 @@ void BGR2YCbCr(const cv::Mat &bgrImage, cv::Mat &ycbcrImage) {
 }
 
 void YCbCr2BGR(const cv::Mat &ycbcrImage, cv::Mat &bgrImage) {
-
   cv::Matx33f K_inv(1.164, 0, 1.596, 1.164, -0.391, -0.813, 1.164, 2.018, 0);
   cv::Matx31f bias(16, 128, 128);
   bgrImage = cv::Mat(ycbcrImage.size(), CV_8UC3);
   for (int i = 0; i < ycbcrImage.rows; i++) {
     for (int j = 0; j < ycbcrImage.cols; j++) {
-      cv::Vec3f ycbcr = ycbcrImage.at<cv::Vec3b>(i, j);
+      cv::Vec3b ycbcr = ycbcrImage.at<cv::Vec3b>(i, j);
       cv::Matx31f ycbcr_(ycbcr[0], ycbcr[1], ycbcr[2]);
-      cv::Matx31f rgb = K_inv * ycbcr_ - bias;
+      cv::Matx31f rgb = K_inv * (ycbcr_ - bias);
       bgrImage.at<cv::Vec3b>(i, j)[0] = NORMALIZE(rgb(2));
       bgrImage.at<cv::Vec3b>(i, j)[1] = NORMALIZE(rgb(1));
       bgrImage.at<cv::Vec3b>(i, j)[2] = NORMALIZE(rgb(0));
     }
   }
+}
+
+void UpsampledBGR2Bayer(const cv::Mat &bgrImage, cv::Mat &upsampledBayerImage) {
+  upsampledBayerImage =
+      cv::Mat(bgrImage.size().height * 2, bgrImage.size().width * 2, CV_8UC1);
+  for (int i = 0; i < bgrImage.rows; i++) {
+    for (int j = 0; j < bgrImage.cols; j++) {
+      // clang-format off
+      upsampledBayerImage.at<uchar>(i * 2, j * 2) = bgrImage.at<cv::Vec3b>(i, j)[1];
+      upsampledBayerImage.at<uchar>(i * 2, j * 2 + 1) = bgrImage.at<cv::Vec3b>(i, j)[0];
+      upsampledBayerImage.at<uchar>(i * 2 + 1, j * 2) = bgrImage.at<cv::Vec3b>(i, j)[2];
+      upsampledBayerImage.at<uchar>(i * 2 + 1, j * 2 + 1) = bgrImage.at<cv::Vec3b>(i, j)[1];
+      // clang-format on
+    }
+  }
+}
+
+double NoiseEstimation(const cv::Mat &bayerImage) {
+  return 0.0; // TODO: Implement this function
 }
 
 cv::Mat DumpRawBMP(const std::string &filename, BmpFileHeader &fileHeader,
@@ -199,86 +217,87 @@ cv::Mat DumpRAW(LibRaw &rawProcessor, cv::Mat &demoImage,
   // rawProcessor.imgdata.params.gamm[1] = 12.92;
   // rawProcessor.imgdata.params.no_auto_bright = 1;
   rawProcessor.dcraw_process();
-  // auto processed = rawProcessor.dcraw_make_mem_image();
-  // demoImage =
-  //     cv::Mat(processed->height, processed->width, CV_8UC3, processed->data);
+  auto processed = rawProcessor.dcraw_make_mem_image();
+  demoImage =
+      cv::Mat(processed->height, processed->width, CV_8UC3, processed->data);
 
   // demoImage to BGR
-  // cv::cvtColor(demoImage, demoImage, cv::COLOR_RGB2BGR);
-  width = rawProcessor.imgdata.sizes.iwidth;
-  height = rawProcessor.imgdata.sizes.iheight;
+  cv::cvtColor(demoImage, demoImage, cv::COLOR_RGB2BGR);
+  width = processed->width;
+  height = processed->height;
 
-  auto imgData = rawProcessor.imgdata.image;
+  auto imgData = processed->data;
 
   cv::Mat img = cv::Mat(height, width, CV_8U);
   for (int i = 0; i < height - 1; i += 2) {
     for (int j = 0; j < width - 1; j += 2) {
       // GBRG
-      // img.at<uchar>(i, j) = demoImage.at<cv::Vec3b>(i, j)[1];
-      // img.at<uchar>(i, j + 1) = demoImage.at<cv::Vec3b>(i, j + 1)[0];
-      // img.at<uchar>(i + 1, j) = demoImage.at<cv::Vec3b>(i + 1, j)[2];
-      // img.at<uchar>(i + 1, j + 1) = demoImage.at<cv::Vec3b>(i + 1, j + 1)[1];
+      img.at<uchar>(i, j) = demoImage.at<cv::Vec3b>(i, j)[1];
+      img.at<uchar>(i, j + 1) = demoImage.at<cv::Vec3b>(i, j + 1)[0];
+      img.at<uchar>(i + 1, j) = demoImage.at<cv::Vec3b>(i + 1, j)[2];
+      img.at<uchar>(i + 1, j + 1) = demoImage.at<cv::Vec3b>(i + 1, j + 1)[1];
 
-      int colorIndices[4] = {
-          rawProcessor.COLOR(i, j), rawProcessor.COLOR(i, j + 1),
-          rawProcessor.COLOR(i + 1, j + 1), rawProcessor.COLOR(i + 1, j)};
-      char cdesc[5] = {rawProcessor.imgdata.idata.cdesc[colorIndices[0]],
-                       rawProcessor.imgdata.idata.cdesc[colorIndices[1]],
-                       rawProcessor.imgdata.idata.cdesc[colorIndices[2]],
-                       rawProcessor.imgdata.idata.cdesc[colorIndices[3]], '\0'};
-      ushort C1 = imgData[i * width + j][colorIndices[0]];
-      ushort C2 = imgData[i * width + j + 1][colorIndices[1]];
-      ushort C3 = imgData[(i + 1) * width + j + 1][colorIndices[2]];
-      ushort C4 = imgData[(i + 1) * width + j][colorIndices[3]];
+      // int colorIndices[4] = {
+      //     rawProcessor.COLOR(i, j), rawProcessor.COLOR(i, j + 1),
+      //     rawProcessor.COLOR(i + 1, j + 1), rawProcessor.COLOR(i + 1, j)};
+      // char cdesc[5] = {rawProcessor.imgdata.idata.cdesc[colorIndices[0]],
+      //                  rawProcessor.imgdata.idata.cdesc[colorIndices[1]],
+      //                  rawProcessor.imgdata.idata.cdesc[colorIndices[2]],
+      //                  rawProcessor.imgdata.idata.cdesc[colorIndices[3]],
+      //                  '\0'};
+      // ushort C1 = imgData[i * width + j][colorIndices[0]];
+      // ushort C2 = imgData[i * width + j + 1][colorIndices[1]];
+      // ushort C3 = imgData[(i + 1) * width + j + 1][colorIndices[2]];
+      // ushort C4 = imgData[(i + 1) * width + j][colorIndices[3]];
 
-      // Any Pattern to GRBG
-      if (strcmp(cdesc, "RGGB") == 0) {
-        img.at<uchar>(i, j) = C2 >> 8;
-        img.at<uchar>(i, j + 1) = C1 >> 8;
-        img.at<uchar>(i + 1, j) = C4 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C3 >> 8;
-      } else if (strcmp(cdesc, "BGGR") == 0) {
-        img.at<uchar>(i, j) = C3 >> 8;
-        img.at<uchar>(i, j + 1) = C4 >> 8;
-        img.at<uchar>(i + 1, j) = C1 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C2 >> 8;
-      } else if (strcmp(cdesc, "GBRG") == 0) {
-        img.at<uchar>(i, j) = C1 >> 8;
-        img.at<uchar>(i, j + 1) = C2 >> 8;
-        img.at<uchar>(i + 1, j) = C3 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C4 >> 8;
-      } else if (strcmp(cdesc, "GRBG") == 0) {
-        img.at<uchar>(i, j) = C4 >> 8;
-        img.at<uchar>(i, j + 1) = C3 >> 8;
-        img.at<uchar>(i + 1, j) = C2 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C1 >> 8;
-      } else if (strcmp(cdesc, "RGBG") == 0) {
-        img.at<uchar>(i, j) = C2 >> 8;
-        img.at<uchar>(i, j + 1) = C1 >> 8;
-        img.at<uchar>(i + 1, j) = C3 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C4 >> 8;
-      } else if (strcmp(cdesc, "GBGR") == 0) {
-        img.at<uchar>(i, j) = C3 >> 8;
-        img.at<uchar>(i, j + 1) = C4 >> 8;
-        img.at<uchar>(i + 1, j) = C2 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C1 >> 8;
-      } else if (strcmp(cdesc, "BGRG") == 0) {
-        img.at<uchar>(i, j) = C1 >> 8;
-        img.at<uchar>(i, j + 1) = C2 >> 8;
-        img.at<uchar>(i + 1, j) = C4 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C3 >> 8;
-      } else if (strcmp(cdesc, "GRGB") == 0) {
-        img.at<uchar>(i, j) = C4 >> 8;
-        img.at<uchar>(i, j + 1) = C3 >> 8;
-        img.at<uchar>(i + 1, j) = C1 >> 8;
-        img.at<uchar>(i + 1, j + 1) = C2 >> 8;
-      } else {
-        std::cerr << "Unknown color pattern: " << cdesc << std::endl;
-      }
+      // // Any Pattern to GRBG
+      // if (strcmp(cdesc, "RGGB") == 0) {
+      //   img.at<uchar>(i, j) = C2 >> 8;
+      //   img.at<uchar>(i, j + 1) = C1 >> 8;
+      //   img.at<uchar>(i + 1, j) = C4 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C3 >> 8;
+      // } else if (strcmp(cdesc, "BGGR") == 0) {
+      //   img.at<uchar>(i, j) = C3 >> 8;
+      //   img.at<uchar>(i, j + 1) = C4 >> 8;
+      //   img.at<uchar>(i + 1, j) = C1 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C2 >> 8;
+      // } else if (strcmp(cdesc, "GBRG") == 0) {
+      //   img.at<uchar>(i, j) = C1 >> 8;
+      //   img.at<uchar>(i, j + 1) = C2 >> 8;
+      //   img.at<uchar>(i + 1, j) = C3 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C4 >> 8;
+      // } else if (strcmp(cdesc, "GRBG") == 0) {
+      //   img.at<uchar>(i, j) = C4 >> 8;
+      //   img.at<uchar>(i, j + 1) = C3 >> 8;
+      //   img.at<uchar>(i + 1, j) = C2 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C1 >> 8;
+      // } else if (strcmp(cdesc, "RGBG") == 0) {
+      //   img.at<uchar>(i, j) = C2 >> 8;
+      //   img.at<uchar>(i, j + 1) = C1 >> 8;
+      //   img.at<uchar>(i + 1, j) = C3 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C4 >> 8;
+      // } else if (strcmp(cdesc, "GBGR") == 0) {
+      //   img.at<uchar>(i, j) = C3 >> 8;
+      //   img.at<uchar>(i, j + 1) = C4 >> 8;
+      //   img.at<uchar>(i + 1, j) = C2 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C1 >> 8;
+      // } else if (strcmp(cdesc, "BGRG") == 0) {
+      //   img.at<uchar>(i, j) = C1 >> 8;
+      //   img.at<uchar>(i, j + 1) = C2 >> 8;
+      //   img.at<uchar>(i + 1, j) = C4 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C3 >> 8;
+      // } else if (strcmp(cdesc, "GRGB") == 0) {
+      //   img.at<uchar>(i, j) = C4 >> 8;
+      //   img.at<uchar>(i, j + 1) = C3 >> 8;
+      //   img.at<uchar>(i + 1, j) = C1 >> 8;
+      //   img.at<uchar>(i + 1, j + 1) = C2 >> 8;
+      // } else {
+      //   std::cerr << "Unknown color pattern: " << cdesc << std::endl;
+      // }
     }
   }
-  demoImage = img;
-  cv::cvtColor(demoImage, demoImage, cv::COLOR_BayerGR2BGR);
+  // demoImage = img;
+  // cv::cvtColor(demoImage, demoImage, cv::COLOR_BayerGR2BGR);
 
   return img;
 }
