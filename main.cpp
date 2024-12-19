@@ -17,7 +17,7 @@ void eval(double time, const cv::Mat &i_s_rgb, const cv::Mat &i_demo_rgb) {
   cv::OutputArray qualityMap = cv::noArray();
   cv::Mat i_s_scaled;
   cv::resize(i_s_rgb, i_s_scaled, i_demo_rgb.size(), 0, 0,
-             cv::InterpolationFlags::INTER_CUBIC);
+             cv::InterpolationFlags::INTER_LINEAR);
   auto MSE =
       cv::quality::QualityMSE::compute(i_s_scaled, i_demo_rgb, qualityMap);
   auto PSNR =
@@ -56,7 +56,7 @@ void test(LibRaw &rawProcessor, const std::string &filename,
   cv::Mat i_YCbCr;
   cv::Mat i_YCbCr_subsampled;
   cv::Mat i_s_rgb;
-  cv::cvtColor(i_demo_rgb, i_YCbCr, cv::COLOR_BGR2YCrCb);
+  BGR2YCbCr(i_demo_rgb, i_YCbCr);
 
   // Subsample the chroma
   // std::cout << ">>> Method 1: SubsampleChroma_PI_420D" << std::endl;
@@ -90,9 +90,13 @@ void test(LibRaw &rawProcessor, const std::string &filename,
 
   std::cout << ">>> Method 5: SubsampleChroma_PD_BIDM" << std::endl;
   start = clock();
-  SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
+  // SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
   end = clock();
-  cv::cvtColor(i_YCbCr_subsampled, i_s_rgb, cv::COLOR_YCrCb2BGR);
+  // SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
+
+  YCbCr2BGR(i_YCbCr, i_s_rgb);
+  cv::imshow("Demo", i_demo_rgb);
+  cv::waitKey(0);
   eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
 }
 

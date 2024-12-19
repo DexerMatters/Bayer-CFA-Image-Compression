@@ -2,6 +2,7 @@
 #include <luma.hpp>
 #include <map>
 #define Sq(x) (x) * (x)
+#define NORMALIZE(x) (x > 255 ? 255 : (x < 0 ? 0 : x))
 
 using namespace cv;
 
@@ -48,9 +49,8 @@ void LumaModification(const Mat &ycbcrImage, const Mat &bayerImage,
             return PixelDistortion(a.first, GRBG, a.second, Cr, Cb) >
                    PixelDistortion(b.first, GRBG, b.second, Cr, Cb);
           });
-
       // Update the ycbrImage
-      subsampledImage.at<Vec3b>(i / 2, j / 2)[0] = best->second;
+      subsampledImage.at<Vec3b>(i / 2, j / 2)[0] = NORMALIZE(best->second);
     }
   }
 }

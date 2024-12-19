@@ -19,38 +19,6 @@ const Vec4f e_b = Vec4f(-0.813, 1.596, 0, -0.813);
 constexpr float BT[3][3] = {0.257, 0.504, 0.098,  -0.148, -0.291,
                             0.439, 0.439, -0.368, -0.071};
 
-// BT.601-5 color conversion
-void RGBImage2YCbCrImage(const Mat &rgbImage, Mat &ycbcrImage) {
-  ycbcrImage = Mat(rgbImage.size(), CV_8UC3);
-  Mat K = Mat(3, 3, CV_32FC1, (void *)BT);
-  Vec3f bias(16, 128, 128);
-  for (int i = 0; i < rgbImage.rows; i++) {
-    for (int j = 0; j < rgbImage.cols; j++) {
-      Vec3f bgr = rgbImage.at<Vec3f>(i, j);
-      Mat rgb = Mat(Vec3f(bgr[2], bgr[1], bgr[0]));
-      Mat ycbcr = K * Mat(rgb) + Mat(bias);
-      ycbcrImage.at<Vec3b>(i, j)[0] = ycbcr.at<float>(0);
-      ycbcrImage.at<Vec3b>(i, j)[1] = ycbcr.at<float>(1);
-      ycbcrImage.at<Vec3b>(i, j)[2] = ycbcr.at<float>(2);
-    }
-  }
-}
-
-void YCbCrImage2RGBImage(const Mat &ycbcrImage, Mat &rgbImage) {
-  Mat K = Mat(3, 3, CV_32FC1, (void *)BT);
-  Vec3f bias(16, 128, 128);
-  rgbImage = Mat(ycbcrImage.size(), CV_8UC3);
-  for (int i = 0; i < ycbcrImage.rows; i++) {
-    for (int j = 0; j < ycbcrImage.cols; j++) {
-      Vec3f ycbcr = ycbcrImage.at<Vec3f>(i, j);
-      Mat rgb = K.inv() * (Mat(ycbcr) - Mat(bias));
-      rgbImage.at<Vec3b>(i, j)[0] = rgb.at<float>(2);
-      rgbImage.at<Vec3b>(i, j)[1] = rgb.at<float>(1);
-      rgbImage.at<Vec3b>(i, j)[2] = rgb.at<float>(0);
-    }
-  }
-}
-
 // Evaluations
 
 float Distortion(Vec4f &Cb, Vec4f &Cr, Vec4f &Cb_b, Vec4f &Cr_b, float Cb_s,

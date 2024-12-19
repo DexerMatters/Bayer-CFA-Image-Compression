@@ -4,6 +4,12 @@
 #include <libraw/libraw.h>
 #include <opencv2/opencv.hpp>
 
+// Color space conversion
+void BGR2YCbCr(const cv::Mat &bgrImage, cv::Mat &ycbcrImage);
+
+void YCbCr2BGR(const cv::Mat &ycbcrImage, cv::Mat &bgrImage);
+
+// BMP Processing
 struct BmpFileHeader {
   uint16_t fileType{0x4D42}; // File type always BM which is 0x4D42
   uint32_t fileSize{0};      // Size of the file (in bytes)
