@@ -18,14 +18,19 @@ float PixelDistortion(int i, const Vec4f &GRBG, float Y, float Cr, float Cb) {
 
 void LumaModification(const Mat &ycbcrImage, const Mat &bayerImage,
                       Mat &subsampledImage) {
+  Mat bayerImage_;
+  if (bayerImage.type() != CV_8UC1)
+    cv::normalize(bayerImage, bayerImage_, 0, 225, cv::NORM_MINMAX, CV_8UC1);
+  else
+    bayerImage_ = bayerImage;
   for (int i = 0; i < ycbcrImage.rows - 1; i += 2) {
     for (int j = 0; j < ycbcrImage.cols - 1; j += 2) {
 
       float Cr = subsampledImage.at<Vec3b>(i / 2, j / 2)[2];
       float Cb = subsampledImage.at<Vec3b>(i / 2, j / 2)[1];
-      Vec4f GRBG(bayerImage.at<uchar>(i, j), bayerImage.at<uchar>(i, j + 1),
-                 bayerImage.at<uchar>(i + 1, j),
-                 bayerImage.at<uchar>(i + 1, j + 1));
+      Vec4b GRBG(bayerImage_.at<uchar>(i, j), bayerImage_.at<uchar>(i, j + 1),
+                 bayerImage_.at<uchar>(i + 1, j),
+                 bayerImage_.at<uchar>(i + 1, j + 1));
 
       // clang-format off
       Vec4f Ys((GRBG[0] + 0.391 * (Cb - 128) + 0.813 * (Cr - 128)) / 1.164 + 16,

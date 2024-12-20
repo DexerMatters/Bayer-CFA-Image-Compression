@@ -52,11 +52,12 @@ void UpsampledBGR2Bayer(const cv::Mat &bgrImage, cv::Mat &upsampledBayerImage) {
   }
 }
 
-void EncodeNDecodeJPEG2000(const cv::Mat &bgrImage, cv::Mat &jpImage) {
+void EncodeNDecodeJPEG2000(const cv::Mat &bgrImage, cv::Mat &dest) {
   std::vector<uchar> buffer;
   cv::imencode(".jpg", bgrImage, buffer,
                {cv::IMWRITE_JPEG2000_COMPRESSION_X1000, 10});
-  jpImage = cv::imdecode(buffer, cv::IMREAD_COLOR);
+
+  dest = cv::imdecode(buffer, cv::IMREAD_COLOR);
 }
 
 double NoiseEstimation(const cv::Mat &bayerImage) {
@@ -243,68 +244,88 @@ cv::Mat DumpRAW(LibRaw &rawProcessor, cv::Mat &demoImage,
       img.at<uchar>(i, j + 1) = demoImage.at<cv::Vec3b>(i, j + 1)[0];
       img.at<uchar>(i + 1, j) = demoImage.at<cv::Vec3b>(i + 1, j)[2];
       img.at<uchar>(i + 1, j + 1) = demoImage.at<cv::Vec3b>(i + 1, j + 1)[1];
-
-      // int colorIndices[4] = {
-      //     rawProcessor.COLOR(i, j), rawProcessor.COLOR(i, j + 1),
-      //     rawProcessor.COLOR(i + 1, j + 1), rawProcessor.COLOR(i + 1, j)};
-      // char cdesc[5] = {rawProcessor.imgdata.idata.cdesc[colorIndices[0]],
-      //                  rawProcessor.imgdata.idata.cdesc[colorIndices[1]],
-      //                  rawProcessor.imgdata.idata.cdesc[colorIndices[2]],
-      //                  rawProcessor.imgdata.idata.cdesc[colorIndices[3]],
-      //                  '\0'};
-      // ushort C1 = imgData[i * width + j][colorIndices[0]];
-      // ushort C2 = imgData[i * width + j + 1][colorIndices[1]];
-      // ushort C3 = imgData[(i + 1) * width + j + 1][colorIndices[2]];
-      // ushort C4 = imgData[(i + 1) * width + j][colorIndices[3]];
-
-      // // Any Pattern to GRBG
-      // if (strcmp(cdesc, "RGGB") == 0) {
-      //   img.at<uchar>(i, j) = C2 >> 8;
-      //   img.at<uchar>(i, j + 1) = C1 >> 8;
-      //   img.at<uchar>(i + 1, j) = C4 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C3 >> 8;
-      // } else if (strcmp(cdesc, "BGGR") == 0) {
-      //   img.at<uchar>(i, j) = C3 >> 8;
-      //   img.at<uchar>(i, j + 1) = C4 >> 8;
-      //   img.at<uchar>(i + 1, j) = C1 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C2 >> 8;
-      // } else if (strcmp(cdesc, "GBRG") == 0) {
-      //   img.at<uchar>(i, j) = C1 >> 8;
-      //   img.at<uchar>(i, j + 1) = C2 >> 8;
-      //   img.at<uchar>(i + 1, j) = C3 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C4 >> 8;
-      // } else if (strcmp(cdesc, "GRBG") == 0) {
-      //   img.at<uchar>(i, j) = C4 >> 8;
-      //   img.at<uchar>(i, j + 1) = C3 >> 8;
-      //   img.at<uchar>(i + 1, j) = C2 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C1 >> 8;
-      // } else if (strcmp(cdesc, "RGBG") == 0) {
-      //   img.at<uchar>(i, j) = C2 >> 8;
-      //   img.at<uchar>(i, j + 1) = C1 >> 8;
-      //   img.at<uchar>(i + 1, j) = C3 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C4 >> 8;
-      // } else if (strcmp(cdesc, "GBGR") == 0) {
-      //   img.at<uchar>(i, j) = C3 >> 8;
-      //   img.at<uchar>(i, j + 1) = C4 >> 8;
-      //   img.at<uchar>(i + 1, j) = C2 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C1 >> 8;
-      // } else if (strcmp(cdesc, "BGRG") == 0) {
-      //   img.at<uchar>(i, j) = C1 >> 8;
-      //   img.at<uchar>(i, j + 1) = C2 >> 8;
-      //   img.at<uchar>(i + 1, j) = C4 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C3 >> 8;
-      // } else if (strcmp(cdesc, "GRGB") == 0) {
-      //   img.at<uchar>(i, j) = C4 >> 8;
-      //   img.at<uchar>(i, j + 1) = C3 >> 8;
-      //   img.at<uchar>(i + 1, j) = C1 >> 8;
-      //   img.at<uchar>(i + 1, j + 1) = C2 >> 8;
-      // } else {
-      //   std::cerr << "Unknown color pattern: " << cdesc << std::endl;
-      // }
     }
   }
-  // demoImage = img;
-  // cv::cvtColor(demoImage, demoImage, cv::COLOR_BayerGR2BGR);
+
+  return img;
+}
+
+cv::Mat DumpRAW_(LibRaw &rawProcessor, cv::Mat &demoImage,
+                 const std::string &filename, int &width, int &height) {
+  rawProcessor.recycle();
+  rawProcessor.open_file(filename.c_str());
+  rawProcessor.unpack();
+  rawProcessor.imgdata.params.gamm[0] = 1.0 / 2.4;
+  rawProcessor.imgdata.params.gamm[1] = 12.92;
+  rawProcessor.imgdata.params.no_auto_bright = 1;
+  rawProcessor.dcraw_process();
+  auto imgData = rawProcessor.imgdata.image;
+  width = rawProcessor.imgdata.sizes.iwidth;
+  height = rawProcessor.imgdata.sizes.iheight;
+  auto img = cv::Mat(height, width, CV_16UC1);
+  for (int i = 0; i < height - 1; i += 2) {
+    for (int j = 0; j < width - 1; j += 2) {
+      int colorIndices[4] = {
+          rawProcessor.COLOR(i, j), rawProcessor.COLOR(i, j + 1),
+          rawProcessor.COLOR(i + 1, j + 1), rawProcessor.COLOR(i + 1, j)};
+      char cdesc[5] = {rawProcessor.imgdata.idata.cdesc[colorIndices[0]],
+                       rawProcessor.imgdata.idata.cdesc[colorIndices[1]],
+                       rawProcessor.imgdata.idata.cdesc[colorIndices[2]],
+                       rawProcessor.imgdata.idata.cdesc[colorIndices[3]], '\0'};
+      ushort C1 = imgData[i * width + j][colorIndices[0]];
+      ushort C2 = imgData[i * width + j + 1][colorIndices[1]];
+      ushort C3 = imgData[(i + 1) * width + j + 1][colorIndices[2]];
+      ushort C4 = imgData[(i + 1) * width + j][colorIndices[3]];
+
+      // Any Pattern to GRBG
+      if (strcmp(cdesc, "RGGB") == 0) {
+        img.at<ushort>(i, j) = C2;
+        img.at<ushort>(i, j + 1) = C1;
+        img.at<ushort>(i + 1, j) = C4;
+        img.at<ushort>(i + 1, j + 1) = C3;
+      } else if (strcmp(cdesc, "BGGR") == 0) {
+        img.at<ushort>(i, j) = C3;
+        img.at<ushort>(i, j + 1) = C4;
+        img.at<ushort>(i + 1, j) = C1;
+        img.at<ushort>(i + 1, j + 1) = C2;
+      } else if (strcmp(cdesc, "GBRG") == 0) {
+        img.at<ushort>(i, j) = C1;
+        img.at<ushort>(i, j + 1) = C2;
+        img.at<ushort>(i + 1, j) = C3;
+        img.at<ushort>(i + 1, j + 1) = C4;
+      } else if (strcmp(cdesc, "GRBG") == 0) {
+        img.at<ushort>(i, j) = C4;
+        img.at<ushort>(i, j + 1) = C3;
+        img.at<ushort>(i + 1, j) = C2;
+        img.at<ushort>(i + 1, j + 1) = C1;
+      } else if (strcmp(cdesc, "RGBG") == 0) {
+        img.at<ushort>(i, j) = C2;
+        img.at<ushort>(i, j + 1) = C1;
+        img.at<ushort>(i + 1, j) = C3;
+        img.at<ushort>(i + 1, j + 1) = C4;
+      } else if (strcmp(cdesc, "GBGR") == 0) {
+        img.at<ushort>(i, j) = C3;
+        img.at<ushort>(i, j + 1) = C4;
+        img.at<ushort>(i + 1, j) = C2;
+        img.at<ushort>(i + 1, j + 1) = C1;
+      } else if (strcmp(cdesc, "BGRG") == 0) {
+        img.at<ushort>(i, j) = C1;
+        img.at<ushort>(i, j + 1) = C2;
+        img.at<ushort>(i + 1, j) = C4;
+        img.at<ushort>(i + 1, j + 1) = C3;
+      } else if (strcmp(cdesc, "GRGB") == 0) {
+        img.at<ushort>(i, j) = C4;
+        img.at<ushort>(i, j + 1) = C3;
+        img.at<ushort>(i + 1, j) = C1;
+        img.at<ushort>(i + 1, j + 1) = C2;
+      } else {
+        std::cerr << "Unknown color pattern: " << cdesc << std::endl;
+      }
+    }
+  }
+  cv::Mat demoImage_16U = cv::Mat(height, width, CV_16UC3);
+  cv::demosaicing(img, demoImage_16U, cv::COLOR_BayerGR2RGB);
+  cv::normalize(demoImage_16U, demoImage, 0, 255, cv::NORM_MINMAX, CV_8U);
 
   return img;
 }

@@ -71,13 +71,13 @@ void test(LibRaw &rawProcessor, const std::string &filename,
   // cv::cvtColor(i_YCbCr_subsampled, i_s_rgb, cv::COLOR_YCrCb2BGR);
   // eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
 
-  std::cout << ">>> Method 3: SubsampleChroma_PD_Modified420A_COPY"
-            << std::endl;
-  start = clock();
-  SubsampleChroma_PD_Modified420A_COPY(i_YCbCr, i_YCbCr_subsampled);
-  end = clock();
-  YCbCr2BGR(i_YCbCr_subsampled, i_s_rgb);
-  eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
+  // std::cout << ">>> Method 3: SubsampleChroma_PD_Modified420A_COPY"
+  //           << std::endl;
+  // start = clock();
+  // SubsampleChroma_PD_Modified420A_COPY(i_YCbCr, i_YCbCr_subsampled);
+  // end = clock();
+  // YCbCr2BGR(i_YCbCr_subsampled, i_s_rgb);
+  // eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
 
   // std::cout << ">>> Method 4: SubsampleChroma_PD_CDM" << std::endl;
   // start = clock();
@@ -88,21 +88,24 @@ void test(LibRaw &rawProcessor, const std::string &filename,
   // i_YCbCr_subsampled.release();
   // i_s_rgb.release();
 
-  // std::cout << ">>> Method 5: SubsampleChroma_PD_BIDM" << std::endl;
-  // start = clock();
+  std::cout << ">>> Method 5: SubsampleChroma_PD_BIDM" << std::endl;
+  start = clock();
+  SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
+  // LumaModification(i_YCbCr, i_bayer, i_YCbCr_subsampled);
+  end = clock();
   // SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
-  // // LumaModification(i_YCbCr, i_bayer, i_YCbCr_subsampled);
-  // end = clock();
-  // // SubsampleChroma_PD_BIDM(i_YCbCr, i_YCbCr_subsampled);
 
-  // YCbCr2BGR(i_YCbCr_subsampled, i_s_rgb);
-  // // UpsampledBGR2Bayer(i_s_rgb, i_bayer_upsampled);
-  // eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
+  YCbCr2BGR(i_YCbCr_subsampled, i_s_rgb);
+  EncodeNDecodeJPEG2000(i_s_rgb, i_s_rgb);
+  // UpsampledBGR2Bayer(i_s_rgb, i_bayer_upsampled);
+  eval((double)(end - start) / CLOCKS_PER_SEC, i_s_rgb, i_demo_rgb);
+  cv::imshow("Demo", i_s_rgb);
+  cv::waitKey(0);
 }
 
 int main(int, char **) {
   LibRaw rawProcessor;
-  test(rawProcessor, "SAMPLE1.ARW", "1");
+  test(rawProcessor, "SAMPLE3.ARW", "1");
   // cv::cvtColor(i_demo_rgb, i_YCbCr, cv::COLOR_BGR2YCrCb);
   return 0;
 }

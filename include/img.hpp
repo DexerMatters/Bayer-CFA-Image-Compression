@@ -70,3 +70,6 @@ void SaveBMP(const std::string &filename, const cv::Mat &img,
 
 cv::Mat DumpRAW(LibRaw &rawProcessor, cv::Mat &demoImage,
                 const std::string &filename, int &width, int &height);
+
+cv::Mat DumpRAW_(LibRaw &rawProcessor, cv::Mat &demoImage,
+                 const std::string &filename, int &width, int &height);
