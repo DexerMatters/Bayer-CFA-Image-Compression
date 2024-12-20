@@ -2,6 +2,7 @@
 .vscode/*
 CMakeFiles
 CMakeFiles/*
+build
 out
 out/*
 cmake_install.cmake
