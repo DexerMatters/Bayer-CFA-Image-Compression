@@ -52,6 +52,13 @@ void UpsampledBGR2Bayer(const cv::Mat &bgrImage, cv::Mat &upsampledBayerImage) {
   }
 }
 
+void EncodeNDecodeJPEG2000(const cv::Mat &bgrImage, cv::Mat &jpImage) {
+  std::vector<uchar> buffer;
+  cv::imencode(".jpg", bgrImage, buffer,
+               {cv::IMWRITE_JPEG2000_COMPRESSION_X1000, 10});
+  jpImage = cv::imdecode(buffer, cv::IMREAD_COLOR);
+}
+
 double NoiseEstimation(const cv::Mat &bayerImage) {
   return 0.0; // TODO: Implement this function
 }

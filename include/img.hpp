@@ -11,6 +11,8 @@ void YCbCr2BGR(const cv::Mat &ycbcrImage, cv::Mat &bgrImage);
 
 void UpsampledBGR2Bayer(const cv::Mat &bgrImage, cv::Mat &upsampledBayerImage);
 
+void EncodeNDecodeJPEG2000(const cv::Mat &bgrImage, cv::Mat &jpImage);
+
 double NoiseEstimation(const cv::Mat &bayerImage);
 
 // BMP Processing
